@@ -68,4 +68,4 @@ docker --version
   ```
 
 ## Extractors
-- [Regular Expression](https://github.com/effaaykhan/Graylog-Docker/blob/main/Extractors/Regex%20Extractor) extractor for fortigate logs
+- [Regular Expression](https://github.com/Sujal242003/Graylog-Docker/blob/main/Extractors/Regex%20Extractor) extractor for fortigate logs
