@@ -1,0 +1,14 @@
+[Unit]
+Description=Wazuh YARA to Graylog Forwarder (Raw TCP)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 yara_to_graylog.py --graylog-host graylog-host-ip --graylog-port port-no.  --filter-rule 108001 --debug
+Restart=always
+User=root
+Group=wazuh
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/var/ossec
+
+[Install]
+WantedBy=multi-user.target
