@@ -69,3 +69,17 @@ docker --version
 
 ## Extractors
 - [Regular Expression](https://github.com/Sujal242003/Graylog-Docker/blob/main/Extractors/Regex%20Extractor) extractor for fortigate logs
+
+
+
+# Forward LLM enriched logs to graylog.
+- Step 1: Create a python file in /var/ossec/:
+  
+  nano /var/ossec/yara_to_graylog.py
+  
+- Step 2: Paste the [yara_to_graylog.py](https://github.com/sujalthakur-03/Graylog-Docker/blob/main/yara_to_graylog.py) in the newly created file.
+- Step 3: Now create a service in /etc/systemd/system/
+  
+  sudo nano /etc/systemd/system/yara-graylog.service
+  
+- Step 4: Paste the [yara-graylog.service](https://github.com/sujalthakur-03/Graylog-Docker/blob/main/yara-graylog.service) in the newly created file.
